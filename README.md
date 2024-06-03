@@ -394,3 +394,64 @@ Using transients efficiently reduces the load on your server and speeds up your 
 ```
 
 </details>
+<details>
+<summary>Tip 29: Implement Conditional Logic with WP_Query</summary>
+Use `WP_Query` with conditional tags to create dynamic and complex queries based on specific conditions. This approach is useful for customizing content display without changing core files or adding numerous plugins.
+
+```php
+Copy code
+$args = array(
+    'post_type' => 'product',
+    'posts_per_page' => 10,
+    'meta_query' => array(
+        array(
+            'key' => 'featured',
+            'value' => 'yes',
+            'compare' => '='
+        )
+    )
+);
+
+$featured_products = new WP_Query($args);
+
+if ($featured_products->have_posts()) :
+    while ($featured_products->have_posts()) : $featured_products->the_post();
+        // Display the featured products
+    endwhile;
+endif;
+
+```
+
+This method organizes your site content more effectively and allows for advanced customizations.
+
+</details>
+
+<details>
+<summary>Tip 30: Secure AJAX Calls with Nonces</summary>
+Secure your AJAX calls in WordPress by using nonces. This ensures that the requests made to your server are legitimate and helps prevent CSRF attacks.
+Here’s how to use nonces with AJAX in WordPress:
+
+Create a Nonce: Add a nonce to your form or AJAX call in the HTML.
+
+```php
+Copy code
+wp_nonce_field('my_ajax_nonce', 'security');
+Pass the Nonce in AJAX: Include the nonce in the AJAX data being sent.
+javascript
+Copy code
+var data = {
+    'action': 'my_action',
+    'security': jQuery('#security').val()
+};
+Verify the Nonce in PHP: Check the nonce in your AJAX handler function.
+php
+Copy code
+if (!wp_verify_nonce($_POST['security'], 'my_ajax_nonce')) {
+    die('Security check failed');
+}
+
+```
+
+Implementing nonces is a best practice for securing AJAX operations in WordPress.
+
+</details>
