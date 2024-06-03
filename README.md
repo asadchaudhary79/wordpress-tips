@@ -372,7 +372,7 @@ Leverage the power of WP-CLI, the command-line interface for WordPress, to effic
 By mastering WP-CLI, you can significantly speed up your WordPress development and maintenance tasks, making it an essential skill for WordPress professionals.
 
 </details>
-
+<details>
 <summary>Tip 28: Use Transients for Temporary Data Caching</summary>
 WordPress transients allow you to temporarily store cached data in the database for a specified period. This is ideal for storing transient, time-sensitive data like API calls or complex queries.
 
