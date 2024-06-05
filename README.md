@@ -468,6 +468,7 @@ Implementing nonces is a best practice for securing AJAX operations in WordPress
 <summary>Tip 31: Leverage Browser Caching for Faster Load Times</summary>
 Take advantage of browser caching to speed up your site for repeat visitors. This involves configuring your web server to set expiry times for various types of content. You can do this via the `.htaccess` file in Apache or through server configuration in Nginx.
 Example for Apache in .htaccess:
+
 ```php
 Copy code
 <IfModule mod_expires.c>
@@ -484,6 +485,7 @@ Copy code
   ExpiresDefault "access plus 2 days"
 </IfModule>
 ```
+
 This helps in reducing load times by storing parts of your website locally in the user's browser.
 
 </details>
