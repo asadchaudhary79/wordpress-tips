@@ -316,7 +316,9 @@ By adopting WebP images, you not only improve your site’s loading speed but al
 </details>
 
 <details>
+    
 <summary>Tip 26: Integrate Progressive Web App (PWA) Features for Enhanced Mobile Experience</summary>
+
 Transform your WordPress site into a Progressive Web App (PWA) to offer an app-like experience to mobile users. PWAs provide offline capabilities, fast load times, and home screen accessibility, significantly enhancing the mobile user experience.
 
 1. **Install a PWA Plugin**: Use WordPress plugins like PWA for WP & AMP or Super Progressive Web Apps to easily integrate PWA features into your site. These plugins typically offer easy setup and customization options.
@@ -336,7 +338,9 @@ By converting your WordPress site into a PWA, you're not only improving the user
 </details>
 
 <details>
+    
 <summary>Tip 27: Streamline Site Maintenance with WP-CLI</summary>
+    
 Leverage the power of WP-CLI, the command-line interface for WordPress, to efficiently manage your site. WP-CLI is a powerful tool for performing a wide range of tasks from the command line, from updating plugins and themes to managing users and databases, making it an indispensable tool for WordPress site maintenance and development.
 
 1. **Install WP-CLI**: Follow the [official installation guide](https://wp-cli.org/#installing) to install WP-CLI on your system.
@@ -373,7 +377,9 @@ By mastering WP-CLI, you can significantly speed up your WordPress development a
 
 </details>
 <details>
+    
 <summary>Tip 28: Use Transients for Temporary Data Caching</summary>
+
 WordPress transients allow you to temporarily store cached data in the database for a specified period. This is ideal for storing transient, time-sensitive data like API calls or complex queries.
 
 ```php
@@ -395,7 +401,9 @@ Using transients efficiently reduces the load on your server and speeds up your 
 
 </details>
 <details>
+    
 <summary>Tip 29: Implement Conditional Logic with WP_Query</summary>
+    
 Use `WP_Query` with conditional tags to create dynamic and complex queries based on specific conditions. This approach is useful for customizing content display without changing core files or adding numerous plugins.
 
 ```php
